@@ -1,0 +1,51 @@
+<div *ngIf="mostrar == true">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+        <th>Profile Image</th>
+        <th>Salary Annual</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.employee_name }}</td>
+        <td>{{ employee.employee_salary }}</td>
+        <td>{{ employee.employee_age }}</td>
+        <td>{{ employee.profile_image }}</td>
+        <td>{{ employee.employee_salary_annual }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="mostrar == false">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Age</th>
+        <th>Profile Image</th>
+        <th>Salary Annual</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let tempEmployee of employees">
+        <td>{{ tempEmployee.id }}</td>
+        <td>{{ tempEmployee.employee_name }}</td>
+        <td>{{ tempEmployee.employee_salary }}</td>
+        <td>{{ tempEmployee.employee_age }}</td>
+        <td>{{ tempEmployee.profile_image }}</td>
+        <td>{{ tempEmployee.employee_salary_annual }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
